@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>InputTextPage</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+
+<script src="../js//test.js"></script>
+
+
+<script>
+   //得到文本框的内容存入localStorage
+    function getStr(){
+        var data = document.getElementById("myTextarea").value;
+        localStorage.setItem("str", data);
+        console.log(localStorage.getItem("str"));
+        window.location.href = "index.html";
+    }
+</script>
+
+    
+</head>
+<body class = "bodybg">
+    
+
+    <ul class="dhbody">
+        <li class="left"><a href="#">学树家族树生成器</a></li>
+        <li class="left"><a class="active" href="JStext.html">主页</a></li>
+        <li class="left"><a href="#contact">家族树</a></li>
+    </ul>
+    <br>
+    <br>
+    <br>
+         
+    <div class="container">
+        <label>按以下格式输入学术家族树的信息：<br>
+        导师：xx<br>
+        (1900-现在)级（博士、硕士、本科）生：（姓名）、（姓名）、（姓名）<br>
+        (1900-现在)级（博士、硕士、本科）生：（姓名）、（姓名）、（姓名）<br>
+        (1900-现在)级（博士、硕士、本科）生：（姓名）、（姓名）、（姓名）<br>
+        </label>
+        <textarea id="myTextarea"cols="60" rows="20" ></textarea>
+        <br>
+        <button type="button" class="btn btn-primary"  onclick="getStr()"><p color="red">生成树</p></button>
+    </div>
+
+
+</body>
+</html>
